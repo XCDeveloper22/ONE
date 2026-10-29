@@ -354,3 +354,171 @@ To update the bot after making code changes:
 2. Trigger a new deployment from the Vercel dashboard (or let it auto-deploy on push).
 3. Ensure that DISCORD_TOKEN and any other environment variables are set in Vercel if you expose HTTP endpoints.
 For always-on Discord presence, keep the Python process running on a platform that supports long-running background workers (e.g., Render) and use Vercel only for optional web-facing parts.
+
+ONE Discord Bot: All Commands
+1. General Commands
+!help
+!ping
+!av [@member]
+av [@member]
+!say <message>
+/say <message>
+!status
+/dashboard
+
+2. Attendance Commands
+User Commands
+present
+absent
+present nstp
+present for the subject nstp
+!attendance
+!leaderboard
+!attendance_leaderboard
+
+Admin Commands
+!present @User
+!absent @User
+!excuse @User <Reason>
+!removepresent @User
+!removereport
+!leaderboard
+!restartattendance
+!resetattendance
+!setup_attendance
+!setupattendance
+/setupattendance
+
+Attendance Configuration
+!settime <Start> - <End>
+!assignchannel #channel
+!assignchannel remove
+!setpermitrole @Role
+!resetpermitrole
+!channelpresent #channel
+!presentrole @Role
+!absentrole @Role
+!excuserole @Role
+!settings
+
+3. Nickname Commands
+User Commands
+!nick <Name>
+!nicksettings
+
+Admin Commands
+!setnick @member <name|remove>
+!autonick @Role [Tag]
+!defaultnick [Tag]
+!removenick @Role
+!updateall [@Role]
+!removeall @Role
+!stripall @Role [TagToRemove]
+/setupnick
+
+4. Custom Commands
+!addcommand <name> <response>
+!removecommand <name>
+!listcommands
+
+5. Sticky Message Commands
+!stick <message>
+!unstick
+!removestick
+
+6. Chat Revival Commands
+!reviveping @Role
+!reviveping
+!revivechannel #channel
+!revivechannel
+!revivechat
+!revive
+revive chat
+
+7. Confession Commands
+!confess <message>
+!setupconfession #channel [#logchannel]
+/setupconfession
+/confession
+/confess
+
+8. Moderation Commands
+!fakeban @User <reason>
+/mute @user [reason]
+/unmute @user [reason]
+/lockunlockchannels [#channel]
+!reset
+
+9. Music and Voice Commands
+Prefix Commands
+!join
+!play <song name>
+!queue
+!skip
+!pause
+!resume
+!volume <0-200>
+!stop
+!playlofi [url]
+!status
+!leave
+
+Slash Commands
+/join
+/playlofi [url]
+/status
+/leave
+/setup247music
+
+10. Virtual Pet Commands
+/pet adopt <type>
+/pet status
+/pet name <name>
+/pet feed
+/pet play
+/pet clean
+/pet sleep
+/pet daily
+/pet fetch
+/pet race
+/pet battle
+/pet shop
+
+11. Game Progress Commands
+Supported Games
+!uno
+!owo
+!mafia
+!gartic
+!casino
+!mudae
+!asterie
+!hangman
+!truthordare
+!virtualfisher
+!guessthenumber
+
+Save or Clear Progress
+!<game> set <progress>
+!<game> clear
+
+12. Brainrot Bot Commands (Concept)
+/brainrot
+/meme [cursed|normal|void]
+/sound
+/npc
+/dripcheck @user
+/mirror <message>
+/ratio
+/chaos level <1-10>
+/mute brainrot
+/uncook server
+
+13. Additional Configuration
+!setupattendance ...
+/setupattendance
+!setup_attendance
+!status <text>
+!status clear
+!resetattendance
+!restartattendance
